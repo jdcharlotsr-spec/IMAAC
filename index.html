@@ -46,7 +46,7 @@
     .hero-wave{position:absolute;left:0;right:0;bottom:-1px;z-index:3;line-height:0;pointer-events:none}.hero-wave svg{display:block;width:100%;height:335px}
 
     .custom-icon{width:110px;height:110px;object-fit:contain;display:block;margin:auto;filter:drop-shadow(0 0 10px rgba(255,216,106,.25))}
-    .value .custom-icon{width:110px;height:110px;margin:0 auto 12px;filter:drop-shadow(0 0 8px rgba(75,15,118,.18))}
+    .value .custom-icon{width:58px;height:58px;margin:0 auto 12px;filter:drop-shadow(0 0 8px rgba(75,15,118,.18))}
     .snapshot-card,.value,.event-card,.btn,.join-btn,.social-link{transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background .28s ease}
     .snapshot-card:hover,.value:hover,.event-card:hover{transform:translateY(-8px)}
     .snapshot-card:hover{box-shadow:0 18px 35px rgba(0,0,0,.25)}
@@ -70,6 +70,88 @@
 
     .footer{position:relative;background:linear-gradient(90deg,var(--deep-purple),var(--purple));color:white;padding:58px 60px 24px;overflow:hidden}.footer:before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:linear-gradient(90deg,var(--red),var(--gold),var(--purple),var(--gold),var(--red))}.footer-grid{max-width:1500px;margin:auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;align-items:center}.footer h3{font-family:'Cinzel',serif;color:var(--bright-gold);margin-bottom:12px}.email-box{display:flex;max-width:360px;background:white;border-radius:8px;overflow:hidden;margin-top:14px}.email-box input{border:0;padding:13px;flex:1;font-family:inherit}.email-box button{border:0;background:var(--red);color:white;font-family:'Cinzel',serif;font-weight:800;padding:0 14px}.footer-brand{display:grid;grid-template-columns:auto 1fr;align-items:center;justify-content:center;gap:18px;text-align:left}.footer-brand img{width:92px}.footer-brand div{font-family:'Cinzel',serif;color:white;font-size:23px;font-weight:700;line-height:1.2}.socials{grid-column:1 / -1;display:flex;gap:12px;margin-top:16px;justify-content:center}.quote{font-family:'Cormorant Garamond',serif;color:#fff4cc;font-size:19px;line-height:1.35;font-style:italic}.copyright{text-align:center;border-top:1px solid rgba(255,216,106,.25);margin-top:30px;padding-top:18px;font-size:12px;font-family:'Cinzel',serif;letter-spacing:.5px}
 
+
+    /* Join IMAAC Popup Form */
+    .join-modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      background:rgba(33,0,51,.82);
+      backdrop-filter:blur(8px);
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .join-modal.active{display:flex}
+    .join-modal-content{
+      width:100%;
+      max-width:580px;
+      max-height:92vh;
+      overflow-y:auto;
+      background:linear-gradient(180deg,#fff8e8,#fff1cf);
+      border:4px solid var(--gold);
+      border-radius:24px;
+      padding:34px;
+      position:relative;
+      box-shadow:0 25px 60px rgba(0,0,0,.45);
+      text-align:center;
+    }
+    .join-modal-content h2{
+      font-family:'Cinzel',serif;
+      color:var(--red);
+      font-size:32px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .join-modal-content p{
+      margin-bottom:22px;
+      color:var(--ink);
+      line-height:1.5;
+    }
+    .join-modal-content input,
+    .join-modal-content select,
+    .join-modal-content textarea{
+      width:100%;
+      padding:13px 15px;
+      margin-bottom:13px;
+      border:2px solid rgba(214,161,43,.55);
+      border-radius:10px;
+      background:#fffdf7;
+      color:var(--ink);
+      font-family:'Libre Baskerville',serif;
+      font-size:14px;
+      outline:none;
+    }
+    .join-modal-content input:focus,
+    .join-modal-content select:focus,
+    .join-modal-content textarea:focus{
+      border-color:var(--purple);
+      box-shadow:0 0 0 3px rgba(75,15,118,.10);
+    }
+    .join-modal-content textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+    .join-modal-content .btn{
+      width:100%;
+      justify-content:center;
+      margin-top:4px;
+    }
+    .close-modal{
+      position:absolute;
+      top:10px;
+      right:16px;
+      background:none;
+      border:none;
+      font-size:36px;
+      line-height:1;
+      color:var(--red);
+      cursor:pointer;
+      font-family:Arial,sans-serif;
+    }
+    body.modal-open{overflow:hidden}
+
     @media(max-width:1150px){.menu{display:none}.hero-inner,.apostle-grid{grid-template-columns:1fr;text-align:center}.gold-line{margin:24px auto}.snapshot{grid-template-columns:repeat(2,1fr);margin-top:0;padding-left:28px;padding-right:28px}.values-row{grid-template-columns:repeat(3,1fr);gap:25px}.event-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr;text-align:center}.email-box{margin:14px auto 0}.footer-brand{text-align:center}.tagline{margin-left:auto;margin-right:auto}.apostle-visual{grid-template-columns:1fr}.walker-seal-card{max-width:420px;margin:0 auto 44px}}
     @media(max-width:680px){.nav{padding:10px 16px}.brand-title{font-size:12px}.brand img{width:48px;height:48px}.brand{min-width:0}.join-btn{display:none}.hero-inner{padding:40px 22px 190px}.hero-title{font-size:42px}.snapshot{grid-template-columns:1fr;padding:30px 22px 45px;margin-top:-135px}.snapshot-card{border-right:0;border-bottom:1px solid rgba(255,216,106,.35)}.events,.footer,.values,.apostle-section{padding-left:22px;padding-right:22px}.values-row,.event-grid{grid-template-columns:1fr}.apostle-title{font-size:31px}.main-seal{max-height:430px}}
   </style>
@@ -86,6 +168,190 @@
         <a href="#about">About Us</a>
         <a href="#mission">Our Mission</a>
         <a href="#belief">What We Believe</a>
+        <a href="#events">Events</a>
+        <a href="#membership">Membership</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="join-btn" type="button" onclick="openJoinForm()">Join IMAAC</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1 class="hero-title">
+            <span class="red">International</span><br>
+            <span class="purple">Ministerial</span><br>
+            <span class="red">Alliance</span><br>
+            <span class="purple" style="font-size:.74em">Apostolic Council</span>
+          </h1>
+          <div class="gold-line"></div>
+          <p class="tagline">United in Apostolic Purpose.<br>Empowered by the Holy Ghost.<br>Advancing the Kingdom.</p>
+          <div class="hero-buttons"><a class="btn purple" href="#about">About Us</a><a class="btn" href="#mission">Our Mission</a></div>
+        </div>
+        <div class="seal-wrap"><div class="seal-glow"></div><img class="main-seal" src="images/organizational-seal.png" alt="International Ministerial Alliance Apostolic Council Seal"></div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a40011"/><stop offset="36%" stop-color="#4b0f76"/><stop offset="70%" stop-color="#d6a12b"/><stop offset="100%" stop-color="#a40011"/></linearGradient></defs>
+          <path fill="url(#waveGradient)" d="M0,145 C170,60 320,215 505,150 C705,78 810,118 980,178 C1135,234 1278,142 1440,90 L1440,320 L0,320 Z"></path>
+          <path fill="#4b0f76" d="M0,208 C175,130 330,220 515,184 C710,146 830,150 990,202 C1140,252 1280,178 1440,138 L1440,320 L0,320 Z"></path>
+          <path fill="#210033" d="M0,258 C225,210 365,270 565,230 C760,192 910,208 1090,250 C1230,280 1340,226 1440,198 L1440,320 L0,320 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="mission" class="snapshot">
+      <div class="snapshot-card">
+        <div class="icon-circle"><img class="custom-icon" src="images/icon-mission.png" alt="Mission icon"></div>
+        <h3>Our Mission</h3>
+        <p>To unite Apostles, Prophets, Evangelists, Pastors and Teachers in Kingdom purpose, equipping the saints and advancing the Gospel worldwide.</p>
+      </div>
+
+      <div class="snapshot-card">
+        <div class="icon-circle"><img class="custom-icon" src="images/icon-vision.png" alt="Vision icon"></div>
+        <h3>Our Vision</h3>
+        <p>To see the Body of Christ mature in unity, walking in apostolic order and fulfilling the Great Commission in power and demonstration.</p>
+      </div>
+
+      <div class="snapshot-card">
+        <div class="icon-circle"><img class="custom-icon" src="images/icon-purpose.png" alt="Purpose icon"></div>
+        <h3>Our Purpose</h3>
+        <p>To operate in Five Fold ministry, empowered by the Holy Ghost, bringing transformation to individuals, communities and nations.</p>
+      </div>
+
+      <div class="snapshot-card">
+        <div class="icon-circle"><img class="custom-icon" src="images/icon-motto.png" alt="Motto icon"></div>
+        <h3>Our Motto</h3>
+        <p>Until we all come in the unity of the faith, and of the knowledge of the Son of God. Ephesians 4:13.</p>
+      </div>
+    </section>
+
+    <section id="about" class="apostle-section">
+      <div class="apostle-grid">
+        <div class="apostle-copy">
+          <div class="section-kicker">Our Presiding Apostle</div>
+          <h2 class="apostle-title">Apostle Develron D. Walker</h2>
+          <div class="apostle-subtitle">Presiding Apostle & Chief Overseer</div>
+          <div class="gold-line"></div>
+          <p class="apostle-intro">A man called by God, anointed for such a time as this, to establish, equip and empower leaders and ministries for Kingdom advancement. Apostle Walker carries a burden for unity, apostolic order and the manifestation of the power of the Holy Ghost in this generation.</p>
+          <div id="bio" class="bio-scroll">
+            <p>With a deep passion for souls and a commitment to biblical truth, Apostle Walker operates in the Five Fold Ministry with a global vision. He believes in raising leaders, building strong ministries, and transforming communities through the power of the Gospel.</p>
+            <p>Develron D. Walker emerges from humble beginnings, marked by early achievements. Born on February 3, 1984, to Gary and the late Deborah Walker, he is the sixth child among seven siblings.</p>
+            <p>His educational journey began in the Aldine Independent School District in Houston, Texas. He later pursued ministerial training at World Harvest Bible College in Columbus, Ohio, obtaining a Diploma of Arts in Pastoral Ministries and Church Administration.</p>
+            <p>As Presiding Apostle and Chief Overseer of IMAAC, Apostle Walker carries an apostolic mantle to establish order in the house of God, strengthen the Five Fold offices, develop leaders, and call the Church into unity, integrity, and Kingdom purpose.</p>
+          </div>
+          <a class="btn purple" href="#bio">Read Full Biography</a>
+        </div>
+        <div class="apostle-visual">
+          <img class="apostle-photo" src="images/apostle-walker.png" alt="Apostle Develron D. Walker">
+          <div class="walker-seal-card"><img src="images/walker-seal.png" alt="Apostle Walker Seal"><a class="small-gold-btn" href="#bio">About Apostle Walker's Seal</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="belief" class="values">
+      <h2 class="section-title">Our Core Values</h2><div class="ornament"></div>
+      <div class="values-row">
+        <div class="value"><img class="custom-icon" src="images/icon-apostolic-integrity.png" alt="Apostolic Integrity icon"><h4>Apostolic<br>Integrity</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-biblical-authority.png" alt="Biblical Authority icon"><h4>Biblical<br>Authority</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-fivefold-equipping.png" alt="Fivefold Equipping icon"><h4>Fivefold<br>Equipping</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-kingdom-unity.png" alt="Kingdom Unity icon"><h4>Kingdom<br>Unity</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-order-accountability.png" alt="Order and Accountability icon"><h4>Order &<br>Accountability</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-global-commission.png" alt="Global Commission icon"><h4>Global<br>Commission</h4></div>
+        <div class="value"><img class="custom-icon" src="images/icon-holy-ghost-empowerment.png" alt="Holy Ghost Empowerment icon"><h4>Holy Ghost<br>Empowerment</h4></div>
+      </div>
+    </section>
+
+    <section id="events" class="events">
+      <h2 class="section-title">National Events</h2><div class="ornament"></div>
+      <div class="event-grid">
+        <article class="event-card"><div class="event-img"><img src="images/event-apostolic-conclave.jpg" alt="Apostolic Conclave"></div><h3>Apostolic Conclave</h3><div class="date">April 24 – 26, 2025</div><a class="learn" href="#">Learn More</a></article>
+        <article class="event-card"><div class="event-img"><img src="images/event-general-council.jpg" alt="Apostolic General Council and Congress"></div><h3>Apostolic General Council & Congress</h3><div class="date">July 17 – 19, 2025</div><a class="learn" href="#">Learn More</a></article>
+        <article class="event-card"><div class="event-img"><img src="images/event-regional-councils.jpg" alt="Regional Apostolic Councils"></div><h3>Regional Apostolic Councils</h3><div class="date">Ongoing Year Round</div><a class="learn" href="#">Learn More</a></article>
+        <article class="event-card"><div class="event-img"><img src="images/event-leadership.jpg" alt="Leadership Intensives"></div><h3>Leadership Intensives</h3><div class="date">September 18 – 20, 2025</div><a class="learn" href="#">Learn More</a></article>
+        <article class="event-card"><div class="event-img"><img src="images/event-prayer.jpg" alt="Prayer and Fasting Gatherings"></div><h3>Prayer & Fasting Gatherings</h3><div class="date">Monthly</div><a class="learn" href="#">Learn More</a></article>
+      </div>
+      <div class="view-all"><a class="btn gold" href="#">View All Events</a></div>
+    </section>
+
+    <footer id="contact" class="footer">
+      <div class="footer-grid">
+        <div><h3>Stay Connected</h3><p>Get updates on events, teachings and Kingdom initiatives.</p><form class="email-box"><input type="email" placeholder="Enter your email"><button>Subscribe</button></form></div>
+        <div class="footer-brand"><img src="images/organizational-seal.png" alt="IMAAC Seal"><div>International Ministerial<br>Alliance Apostolic Council</div><div class="socials">
+          <a class="social-link" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"/></svg></a>
+          <a class="social-link" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10c3 0 5 2 5 5v10c0 3-2 5-5 5H7c-3 0-5-2-5-5V7c0-3 2-5 5-5zm5 6a4 4 0 100 8 4 4 0 000-8zm6.2-.7a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
+          <a class="social-link" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 8s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C15.4 4.3 12 4.3 12 4.3s-3.4 0-6.7.3c-.5.1-1.5.1-2.4 1C2.2 6.3 2 8 2 8s-.3 2-.3 4 .3 4 .3 4 .2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 6.5.3 6.5.3s3.4 0 6.7-.3c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.4.9-2.4s.3-2 .3-4-.3-4-.3-4zM10 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+          <a class="social-link" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16 3c.4 3 2.1 4.8 5 5v4c-1.9 0-3.5-.5-5-1.5V16c0 3.4-2.6 6-6.2 6C6.5 22 4 19.7 4 16.6c0-3.3 2.6-5.7 6-5.7.4 0 .8 0 1 .1v4.2c-.3-.1-.7-.2-1.1-.2-1.2 0-2 .8-2 1.8s.8 1.8 1.9 1.8c1.3 0 2.2-.8 2.2-2.5V3h4z"/></svg></a>
+          <a class="social-link" href="#" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3V5zm2 3l7 5 7-5v-1l-7 5-7-5v1z"/></svg></a>
+        </div></div>
+        <div class="quote">“Endeavouring to keep the unity of the Spirit in the bond of peace, till we all come in the unity of the faith.”<br><strong>— Ephesians 4:3, 13</strong></div>
+      </div>
+      <div class="copyright">© 2025 International Ministerial Alliance Apostolic Council | All Rights Reserved</div>
+    </footer>
+  </main>
+
+  <div id="joinModal" class="join-modal" aria-hidden="true">
+    <div class="join-modal-content" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+      <button class="close-modal" type="button" onclick="closeJoinForm()" aria-label="Close form">×</button>
+
+      <h2 id="joinModalTitle">Join IMAAC</h2>
+      <p>Complete the form below and our office will follow up with you.</p>
+
+      <form action="YOUR_FORMSPREE_URL_HERE" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="church" placeholder="Church / Ministry Name">
+        <input type="text" name="role" placeholder="Ministerial Role / Title">
+
+        <select name="interest" required>
+          <option value="">I am interested in...</option>
+          <option value="Membership">Membership</option>
+          <option value="Credentialing">Credentialing</option>
+          <option value="Fellowship">Fellowship</option>
+          <option value="More Information">More Information</option>
+        </select>
+
+        <textarea name="message" placeholder="Tell us briefly about your ministry"></textarea>
+
+        <button type="submit" class="btn gold">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openJoinForm(){
+      const modal = document.getElementById('joinModal');
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden','false');
+      document.body.classList.add('modal-open');
+    }
+
+    function closeJoinForm(){
+      const modal = document.getElementById('joinModal');
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden','true');
+      document.body.classList.remove('modal-open');
+    }
+
+    window.addEventListener('click', function(e){
+      const modal = document.getElementById('joinModal');
+      if(e.target === modal){
+        closeJoinForm();
+      }
+    });
+
+    window.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){
+        closeJoinForm();
+      }
+    });
+  </script>
+
+</body>
+</html>        <a href="#belief">What We Believe</a>
         <a href="#events">Events</a>
         <a href="#membership">Membership</a>
         <a href="#contact">Contact</a>
