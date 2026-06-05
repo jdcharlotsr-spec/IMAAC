@@ -397,22 +397,37 @@
       <h2 id="joinModalTitle">Join IMAAC</h2>
       <p>Complete the form below and our office will follow up with you.</p>
 
-      <form action="YOUR_FORMSPREE_URL_HERE" method="POST">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <input type="text" name="church" placeholder="Church / Ministry Name">
-        <input type="text" name="role" placeholder="Ministerial Role / Title">
+      <form action="https://formspree.io/f/xojzvpwo" method="POST">
+<input type="text" name="full_name" placeholder="Full Name" required>
 
-        <select name="interest" required>
-          <option value="">I am interested in...</option>
-          <option value="Membership">Membership</option>
-          <option value="Credentialing">Credentialing</option>
-          <option value="Fellowship">Fellowship</option>
-          <option value="More Information">More Information</option>
-        </select>
+<input type="email" name="email" placeholder="Email Address" required>
 
-        <textarea name="message" placeholder="Tell us briefly about your ministry"></textarea>
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<input type="text" name="church_name" placeholder="Church / Ministry Name">
+
+<input type="text" name="city_state" placeholder="City & State">
+
+<select name="office">
+    <option>Minister</option>
+    <option>Elder</option>
+    <option>Pastor</option>
+    <option>Evangelist</option>
+    <option>Prophet</option>
+    <option>Apostle</option>
+    <option>Bishop</option>
+</select>
+
+<select name="membership_interest">
+    <option>Membership</option>
+    <option>Ministerial Fellowship</option>
+    <option>Credentialing</option>
+    <option>Church Affiliation</option>
+    <option>More Information</option>
+</select>
+
+<textarea name="ministry_background"
+placeholder="Tell us about your ministry experience"></textarea>
 
         <button type="submit" class="btn gold">Submit Application</button>
       </form>
